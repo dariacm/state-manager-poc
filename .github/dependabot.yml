@@ -1,0 +1,50 @@
+version: 2
+updates:
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'monthly'
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    open-pull-requests-limit: 10
+    ignore:
+      - dependency-name: "eslint"
+      - dependency-name: "eslint-plugin-vitest"
+    groups:
+      lint:
+        patterns:
+          - '@typescript-eslint/*'
+          - 'eslint'
+          - 'eslint-*'
+          - 'prettier'
+      types:
+        patterns:
+          - '@types/*'
+      vitest:
+        patterns:
+          - 'vitest'
+          - '@vitest/*'
+      typescript:
+        patterns:
+          - 'tsx'
+          - 'typescript'
+      fastify:
+        patterns:
+          - '@fastify/*'
+          - 'fastify'
+          - 'fastify-*'
+      message-queue-toolkit:
+        patterns:
+          - '@message-queue-toolkit/*'
+      prisma:
+        patterns:
+          - 'prisma'
+          - '@prisma/*'
+      awilix:
+        patterns:
+          - 'awilix'
+          - 'awilix-*'
