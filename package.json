@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=20.12.2"
   },
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "build": "tsc",
     "copy:config": "cpy --rename=.env ./.env.default ./",
@@ -32,9 +32,9 @@
     "jwt:generate": "cross-env NODE_ENV=development tsx scripts/generateJwt.ts"
   },
   "dependencies": {
-    "@aws-sdk/credential-providers": "^3.577.0",
     "@aws-sdk/client-sns": "^3.577.0",
     "@aws-sdk/client-sqs": "^3.577.0",
+    "@aws-sdk/credential-providers": "^3.577.0",
     "@fastify/auth": "^4.6.1",
     "@fastify/awilix": "^5.1.0",
     "@fastify/cors": "^9.0.1",
@@ -49,9 +49,9 @@
     "@lokalise/node-core": "^9.17.1",
     "@lokalise/zod-extras": "^2.1.0",
     "@message-queue-toolkit/amqp": "^14.1.0",
+    "@message-queue-toolkit/core": "^12.1.0",
     "@message-queue-toolkit/sns": "^14.1.0",
     "@message-queue-toolkit/sqs": "^14.1.0",
-    "@message-queue-toolkit/core": "^12.1.0",
     "@prisma/client": "^5.14.0",
     "@prisma/instrumentation": "^5.14.0",
     "amqplib": "^0.10.4",
@@ -66,12 +66,14 @@
     "fastify-type-provider-zod": "^1.2.0",
     "ioredis": "^5.4.1",
     "jsonwebtoken": "^9.0.2",
+    "jssm": "^5.98.2",
     "layered-loader": "^13.1.0",
     "newrelic": "11.17.0",
     "pino": "^9.1.0",
     "pino-pretty": "^11.0.0",
     "redis-semaphore": "^5.5.1",
     "toad-scheduler": "^3.0.1",
+    "ts-node": "^10.9.2",
     "undici": "^6.16.1",
     "validation-utils": "^10.0.0",
     "zod": "^3.23.8"
