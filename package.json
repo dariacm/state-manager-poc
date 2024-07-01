@@ -91,8 +91,8 @@
     "prisma": "^5.14.0",
     "prisma-lint": "^0.5.0",
     "ts-deepmerge": "^7.0.0",
-    "tsx": "^4.10.5",
-    "typescript": "5.4.5",
+    "tsx": "^4.16.0",
+    "typescript": "5.5.3",
     "vitest": "1.6.0",
     "yaml": "^2.4.2"
   }
